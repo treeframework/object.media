@@ -1,0 +1,20 @@
+{
+  "name": "tree-media",
+  "version": "0.1.0",
+  "homepage": "https://github.com/treeframework/object.media",
+  "authors": [
+    "Ilia Kolev <treeframework@iliakolev.com>"
+  ],
+  "description": "Nicole Sullivan’s media object in the TreeFramework",
+  "main": "_media.scss",
+  "keywords": [
+    "TreeFramework",
+    "css"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "tree-defaults": "latest",
+    "tree-clearfix": "latest",
+    "tree-functions": "latest"
+  }
+}
