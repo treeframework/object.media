@@ -1,6 +1,6 @@
 # The media object
 
-TreeFramework `media` object module is  mplementation of [Nicole
+TreeFramework `media` object module is implementation of [Nicole
 Sullivan](https://twitter.com/stubbornella)’s <cite>media object</cite>—the
 poster child of OOCSS.
 
