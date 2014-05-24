@@ -1,17 +1,17 @@
 {
   "name": "tree-media",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/treeframework/object.media",
   "authors": [
-    "Ilia Kolev <treeframework@iliakolev.com>"
+    "Harry Roberts <harry@csswizardry.com>",
+    "Ilia Kolev <contact@iliakolev.com>"
   ],
-  "description": "Nicole Sullivan’s media object in the TreeFramework",
+  "description": "Nicole Sullivan’s media object.",
   "main": "_media.scss",
   "keywords": [
-    "TreeFramework",
     "css"
   ],
-  "license": "MIT",
+  "license": "Apache",
   "dependencies": {
     "tree-defaults": "latest",
     "tree-clearfix": "latest",
