@@ -7,9 +7,11 @@
 
 // Predefine the variables below in order to alter and enable specific features.
 $tree-media-gutter:                $tree-base-spacing-unit !default;
+$tree-media-gutter--tiny:          quarter($tree-media-gutter) !default;
 $tree-media-gutter--small:         halve($tree-media-gutter) !default;
 $tree-media-gutter--large:         double($tree-media-gutter) !default;
 
+$tree-enable-media--tiny:          false !default;
 $tree-enable-media--small:         false !default;
 $tree-enable-media--large:         false !default;
 $tree-enable-media--rev:           false !default;
@@ -53,6 +55,39 @@ $tree-media-collapse-at:           720px !default;
 
 
 
+
+@if ($tree-enable-media--tiny == true) {
+
+    // Tiny media objects.
+
+    .#{$tree-namespace}media--tiny,
+    %#{$tree-namespace}media--tiny {
+
+        > .#{$tree-namespace}media__img,
+        > %#{$tree-namespace}media__img {
+            margin-right: $tree-media-gutter--tiny;
+        }
+
+        @if ($tree-enable-media--rev == true) {
+
+            // Tiny reversed media objects.
+
+            &.#{$tree-namespace}media--rev,
+            &%#{$tree-namespace}media--rev {
+
+                > .#{$tree-namespace}media__img,
+                > %#{$tree-namespace}media__img {
+                    margin-right: 0;
+                    margin-left: $tree-media-gutter--tiny;
+                }
+
+            }
+
+        }
+
+    }
+
+}
 
 @if ($tree-enable-media--small == true) {
 
