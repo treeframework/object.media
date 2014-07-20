@@ -6,6 +6,8 @@
 // stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
 
 // Predefine the variables below in order to alter and enable specific features.
+$tree-media-namespace:             $tree-namespace !default;
+
 $tree-media-gutter:                $tree-base-spacing-unit !default;
 $tree-media-gutter--tiny:          quarter($tree-media-gutter) !default;
 $tree-media-gutter--small:         halve($tree-media-gutter) !default;
@@ -23,14 +25,14 @@ $tree-media-collapse-at:           720px !default;
 
 
 
-.#{$tree-namespace}media,
-%#{$tree-namespace}media {
+.#{$tree-media-namespace}media,
+%#{$tree-media-namespace}media {
     @extend %clearfix;
     display: block;
 }
 
-.#{$tree-namespace}media__img,
-%#{$tree-namespace}media__img {
+.#{$tree-media-namespace}media__img,
+%#{$tree-media-namespace}media__img {
     float: left;
     margin-right: $tree-media-gutter;
 
@@ -40,8 +42,8 @@ $tree-media-collapse-at:           720px !default;
 
 }
 
-.#{$tree-namespace}media__body,
-%#{$tree-namespace}media__body {
+.#{$tree-media-namespace}media__body,
+%#{$tree-media-namespace}media__body {
     overflow: hidden;
     display: block;
 
@@ -60,11 +62,11 @@ $tree-media-collapse-at:           720px !default;
 
     // Tiny media objects.
 
-    .#{$tree-namespace}media--tiny,
-    %#{$tree-namespace}media--tiny {
+    .#{$tree-media-namespace}media--tiny,
+    %#{$tree-media-namespace}media--tiny {
 
-        > .#{$tree-namespace}media__img,
-        > %#{$tree-namespace}media__img {
+        > .#{$tree-media-namespace}media__img,
+        > %#{$tree-media-namespace}media__img {
             margin-right: $tree-media-gutter--tiny;
         }
 
@@ -72,11 +74,11 @@ $tree-media-collapse-at:           720px !default;
 
             // Tiny reversed media objects.
 
-            &.#{$tree-namespace}media--rev,
-            &%#{$tree-namespace}media--rev {
+            &.#{$tree-media-namespace}media--rev,
+            &%#{$tree-media-namespace}media--rev {
 
-                > .#{$tree-namespace}media__img,
-                > %#{$tree-namespace}media__img {
+                > .#{$tree-media-namespace}media__img,
+                > %#{$tree-media-namespace}media__img {
                     margin-right: 0;
                     margin-left: $tree-media-gutter--tiny;
                 }
@@ -93,11 +95,11 @@ $tree-media-collapse-at:           720px !default;
 
     // Small media objects.
 
-    .#{$tree-namespace}media--small,
-    %#{$tree-namespace}media--small {
+    .#{$tree-media-namespace}media--small,
+    %#{$tree-media-namespace}media--small {
 
-        > .#{$tree-namespace}media__img,
-        > %#{$tree-namespace}media__img {
+        > .#{$tree-media-namespace}media__img,
+        > %#{$tree-media-namespace}media__img {
             margin-right: $tree-media-gutter--small;
         }
 
@@ -105,11 +107,11 @@ $tree-media-collapse-at:           720px !default;
 
             // Small reversed media objects.
 
-            &.#{$tree-namespace}media--rev,
-            &%#{$tree-namespace}media--rev {
+            &.#{$tree-media-namespace}media--rev,
+            &%#{$tree-media-namespace}media--rev {
 
-                > .#{$tree-namespace}media__img,
-                > %#{$tree-namespace}media__img {
+                > .#{$tree-media-namespace}media__img,
+                > %#{$tree-media-namespace}media__img {
                     margin-right: 0;
                     margin-left: $tree-media-gutter--small;
                 }
@@ -126,11 +128,11 @@ $tree-media-collapse-at:           720px !default;
 
     // Large media objects.
 
-    .#{$tree-namespace}media--large,
-    %#{$tree-namespace}media--large {
+    .#{$tree-media-namespace}media--large,
+    %#{$tree-media-namespace}media--large {
 
-        > .#{$tree-namespace}media__img,
-        > %#{$tree-namespace}media__img {
+        > .#{$tree-media-namespace}media__img,
+        > %#{$tree-media-namespace}media__img {
             margin-right: $tree-media-gutter--large;
         }
 
@@ -138,11 +140,11 @@ $tree-media-collapse-at:           720px !default;
 
             // Large reversed media objects.
 
-            &.#{$tree-namespace}media--rev,
-            &%#{$tree-namespace}media--rev {
+            &.#{$tree-media-namespace}media--rev,
+            &%#{$tree-media-namespace}media--rev {
 
-                > .#{$tree-namespace}media__img,
-                > %#{$tree-namespace}media__img {
+                > .#{$tree-media-namespace}media__img,
+                > %#{$tree-media-namespace}media__img {
                     margin-right: 0;
                     margin-left: $tree-media-gutter--large;
                 }
@@ -163,11 +165,11 @@ $tree-media-collapse-at:           720px !default;
 
     // Reversed image location (right instead of left). Extends ` .media`.
 
-    .#{$tree-namespace}media--rev,
-    %#{$tree-namespace}media--rev {
+    .#{$tree-media-namespace}media--rev,
+    %#{$tree-media-namespace}media--rev {
 
-        > .#{$tree-namespace}media__img,
-        > %#{$tree-namespace}media__img {
+        > .#{$tree-media-namespace}media__img,
+        > %#{$tree-media-namespace}media__img {
             float: right;
             margin-right: 0;
             margin-left: $tree-media-gutter;
@@ -185,11 +187,11 @@ $tree-media-collapse-at:           720px !default;
 
     // Flush media objects have no space between the image- and text-content.
 
-    .#{$tree-namespace}media--flush,
-    %#{$tree-namespace}media--flsuh {
+    .#{$tree-media-namespace}media--flush,
+    %#{$tree-media-namespace}media--flsuh {
 
-        > .#{$tree-namespace}media__img,
-        > %#{$tree-namespace}media__img {
+        > .#{$tree-media-namespace}media__img,
+        > %#{$tree-media-namespace}media__img {
             margin-right: 0;
             margin-left: 0;
         }
@@ -217,12 +219,12 @@ $tree-media-collapse-at:           720px !default;
 
     @media screen and (max-width: $tree-media-collapse-at) {
 
-        .#{$tree-namespace}media--responsive,
-        %#{$tree-namespace}media--responsive {
+        .#{$tree-media-namespace}media--responsive,
+        %#{$tree-media-namespace}media--responsive {
 
             // Rework the spacing on regular media objects.
-            > .#{$tree-namespace}media__img,
-            > %#{$tree-namespace}media__img {
+            > .#{$tree-media-namespace}media__img,
+            > %#{$tree-media-namespace}media__img {
                 float: none;
                 margin-right: 0;
                 margin-bottom: $tree-media-gutter;
@@ -237,11 +239,11 @@ $tree-media-collapse-at:           720px !default;
                 // spacing on media objects that are also small media objects
                 // in their regular state.
 
-                &.#{$tree-namespace}media--small,
-                &%#{$tree-namespace}media--small {
+                &.#{$tree-media-namespace}media--small,
+                &%#{$tree-media-namespace}media--small {
 
-                    > .#{$tree-namespace}media__img,
-                    > %#{$tree-namespace}media__img {
+                    > .#{$tree-media-namespace}media__img,
+                    > %#{$tree-media-namespace}media__img {
                         margin-right: 0;
                         margin-left: 0;
                     }
@@ -258,11 +260,11 @@ $tree-media-collapse-at:           720px !default;
                 // spacing on media objects that are also large media objects
                 // in their regular state.
 
-                &.#{$tree-namespace}media--large,
-                &%#{$tree-namespace}media--large {
+                &.#{$tree-media-namespace}media--large,
+                &%#{$tree-media-namespace}media--large {
 
-                    > .#{$tree-namespace}media__img,
-                    > %#{$tree-namespace}media__img {
+                    > .#{$tree-media-namespace}media__img,
+                    > %#{$tree-media-namespace}media__img {
                         margin-right: 0;
                         margin-left: 0;
                     }
