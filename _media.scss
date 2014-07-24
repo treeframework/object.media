@@ -9,13 +9,15 @@
 $tree-media-namespace:             $tree-namespace !default;
 
 $tree-media-gutter:                $tree-base-spacing-unit !default;
-$tree-media-gutter--tiny:          quarter($tree-media-gutter) !default;
-$tree-media-gutter--small:         halve($tree-media-gutter) !default;
-$tree-media-gutter--large:         double($tree-media-gutter) !default;
+$tree-media-gutter--tiny:            quarter($tree-media-gutter) !default;
+$tree-media-gutter--small:             halve($tree-media-gutter) !default;
+$tree-media-gutter--large:            double($tree-media-gutter) !default;
+$tree-media-gutter--huge:          quadruple($tree-media-gutter) !default;
 
 $tree-enable-media--tiny:          false !default;
 $tree-enable-media--small:         false !default;
 $tree-enable-media--large:         false !default;
+$tree-enable-media--huge:          false !default;
 $tree-enable-media--rev:           false !default;
 $tree-enable-media--flush:         false !default;
 $tree-enable-media--responsive:    false !default;
@@ -157,6 +159,39 @@ $tree-media-collapse-at:           720px !default;
 
 }
 
+@if ($tree-enable-media--huge == true) {
+
+    // Huge media objects.
+
+    .#{$tree-media-namespace}media--huge,
+    %#{$tree-media-namespace}media--huge {
+
+        > .#{$tree-media-namespace}media__img,
+        > %#{$tree-media-namespace}media__img {
+            margin-right: $tree-media-gutter--huge;
+        }
+
+        @if ($tree-enable-media--rev == true) {
+
+            // Huge reversed media objects.
+
+            &.#{$tree-media-namespace}media--rev,
+            &%#{$tree-media-namespace}media--rev {
+
+                > .#{$tree-media-namespace}media__img,
+                > %#{$tree-media-namespace}media__img {
+                    margin-right: 0;
+                    margin-left: $tree-media-gutter--huge;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
 
 
 
@@ -231,6 +266,28 @@ $tree-media-collapse-at:           720px !default;
                 margin-left: 0;
             }
 
+            @if ($tree-enable-media--tiny == true) {
+
+                // Tiny responsive media objects.
+                //
+                // Take a little more heavy-handed approach to reworking
+                // spacing on media objects that are also tiny media objects
+                // in their regular state.
+
+                &.#{$tree-media-namespace}media--tiny,
+                &%#{$tree-media-namespace}media--tiny {
+
+                    > .#{$tree-media-namespace}media__img,
+                    > %#{$tree-media-namespace}media__img {
+                        margin-right: 0;
+                        margin-left: 0;
+                        margin-bottom: $tree-media-gutter--tiny;
+                    }
+
+                }
+
+            }
+
             @if ($tree-enable-media--small == true) {
 
                 // Small responsive media objects.
@@ -246,6 +303,7 @@ $tree-media-collapse-at:           720px !default;
                     > %#{$tree-media-namespace}media__img {
                         margin-right: 0;
                         margin-left: 0;
+                        margin-bottom: $tree-media-gutter--small;
                     }
 
                 }
@@ -267,6 +325,29 @@ $tree-media-collapse-at:           720px !default;
                     > %#{$tree-media-namespace}media__img {
                         margin-right: 0;
                         margin-left: 0;
+                        margin-bottom: $tree-media-gutter--large;
+                    }
+
+                }
+
+            }
+
+            @if ($tree-enable-media--huge == ture) {
+
+                // Huge responsive media objects.
+                //
+                // Take a little more heavy-handed approach to rework
+                // spacing on media objects that are also huge media objects
+                // in their regular state.
+
+                &.#{$tree-media-namespace}media--huge,
+                &%#{$tree-media-namespace}media--huge {
+
+                    > .#{$tree-media-namespace}media__img,
+                    > %#{$tree-media-namespace}media__img {
+                        margin-right: 0;
+                        margin-left: 0;
+                        margin-bottom: $tree-media-gutter--huge;
                     }
 
                 }
