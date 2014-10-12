@@ -1,6 +1,6 @@
 {
   "name": "tree-media",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "homepage": "https://github.com/treeframework/object.media",
   "authors": [
     "Harry Roberts <harry@csswizardry.com>",
@@ -17,7 +17,7 @@
   "license": "Apache",
   "dependencies": {
     "tree-defaults": "~0.2.4",
-    "tree-clearfix": "~0.2.4",
+    "tree-clearfix": "~0.2.5",
     "tree-functions": "~0.2.4"
   }
 }
