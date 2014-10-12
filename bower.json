@@ -7,14 +7,17 @@
     "Ilia Kolev <info@iliakolev.com>"
   ],
   "description": "Nicole Sullivan’s media object.",
-  "main": "_media.scss",
+  "main": "_object.media.scss",
+  "ignore": [
+    "*.md"
+  ],
   "keywords": [
     "css"
   ],
   "license": "Apache",
   "dependencies": {
-    "tree-defaults": "latest",
-    "tree-clearfix": "latest",
-    "tree-functions": "latest"
+    "tree-defaults": "~0.2.4",
+    "tree-clearfix": "~0.2.4",
+    "tree-functions": "~0.2.4"
   }
 }
