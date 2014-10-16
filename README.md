@@ -60,7 +60,7 @@ Basic usage of the Media object uses the required classes:
 
 ```html
 <div class="media">
-    <img class="media__img" src="/path/to/image.png" alt=" />
+    <img class="media__img" src="/path/to/image.png" alt="" />
     <div class="media__body">
         <p>Text-like content goes here.<p>
     </div>
