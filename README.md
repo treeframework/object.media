@@ -21,13 +21,19 @@ dependencies in the relevant way.
 
 ## Instalation
 
-The recommended installation method is Bower, but you can install the MEdia
-module via a Git Submodule, or copy and paste.
+The recommended installation method is Bower, but you can install the Media
+module via npm, Git Submodule, or copy and paste.
 
 ### Install using Bower:
 
 ```sh
-$ bower install --save tree-media
+$ bower install tree-media --save
+```
+
+### Install using npm:
+
+```sh
+$ npm install tree-media --save
 ```
 
 Once installed, `@import` into your project in its Objects layer:
