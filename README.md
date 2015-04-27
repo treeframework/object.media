@@ -70,7 +70,7 @@ Other, optional classes can supplement the required base classes:
 * `.o-media--flush`: remove the space between the image- and text-content.
 * `.o-media--[tiny|small|large|huge]`: alter the spacing between the image- and
   text-content.
-* `o-.media--rev`: reverse the horizontal rendered order of the image- and
+* `o-media--rev`: reverse the horizontal rendered order of the image- and
   text-content.
 * `.o-media--responsive`: a very basic responsive implementation of the media
   object. Pragmatic; far from perfect.
