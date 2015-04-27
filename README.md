@@ -29,16 +29,16 @@ You can install the `media` module via Bower, npm, or copy and paste.
 $ bower install tree-media --save
 ```
 
-### Install using npm:
-
-```sh
-$ npm install tree-media --save
-```
-
 Once installed, `@import` into your project in its Objects layer:
 
 ```scss
 @import "bower_components/tree-media/object.media";
+```
+
+### Install using npm:
+
+```sh
+$ npm install tree-media --save
 ```
 
 ### Install via file download
