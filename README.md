@@ -44,7 +44,7 @@ Once installed, `@import` into your project in its Objects layer:
 ### Install via file download
 
 The least recommended option for installation is to simply download
-`_objects.media.scss` into your project and `@import` it into your project in
+`_object.media.scss` into your project and `@import` it into your project in
 its Objects layer.
 
 ## Usage
