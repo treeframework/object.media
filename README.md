@@ -9,20 +9,19 @@ post](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hund
 
 ## Dependencies
 
-The Media object depends on three other modules:
+The `media` object depends on three other modules:
 
 * [settings.defaults](https://github.com/treeframework/settings.defaults)
 * [tools.functions](https://github.com/treeframework/tools.functions)
 * [trump.clearfix](https://github.com/treeframework/trump.clearfix)
 
-If you install the Media object using Bower, you will get these dependencies at
-the same time. If not using Bower, please be sure to install and `@import` these
-dependencies in the relevant way.
+If you install the `media` object using Bower or npm, you will get these 
+dependencies at the same time. If not using Bower or npm, please be sure to 
+install and `@import` these dependencies in the relevant way.
 
 ## Instalation
 
-The recommended installation method is Bower, but you can install the Media
-module via npm, Git Submodule, or copy and paste.
+You can install the `media` module via Bower, npm, or copy and paste.
 
 ### Install using Bower:
 
@@ -42,18 +41,6 @@ Once installed, `@import` into your project in its Objects layer:
 @import "bower_components/tree-media/object.media";
 ```
 
-### Install as a Git Submodule:
-
-```sh
-$ git submodule add git@github.com:treeframework/object.media.git
-```
-
-Once installed, `@import` into your project in its Objects layer:
-
-```scss
-@import "object.media/object.media";
-```
-
 ### Install via file download
 
 The least recommended option for installation is to simply download
@@ -62,38 +49,38 @@ its Objects layer.
 
 ## Usage
 
-Basic usage of the Media object uses the required classes:
+Basic usage of the `media` object uses the required classes:
 
 ```html
-<div class="media">
-    <img class="media__img" src="/path/to/image.png" alt="" />
-    <div class="media__body">
+<div class="o-media">
+    <img class="o-media__img" src="/path/to/image.png" alt="" />
+    <div class="o-media__body">
         <p>Text-like content goes here.<p>
     </div>
 </div>
 ```
 
-The only valid children of the `.media` node are `.media__img` and
-`.media__body`.
+The only valid children of the `.o-media` node are `.o-media__img` and
+`.o-media__body`.
 
 ## Options
 
 Other, optional classes can supplement the required base classes:
 
-* `.media--flush`: remove the space between the image- and text-content.
-* `.media--[tiny|small|large|huge]`: alter the spacing between the image- and
+* `.o-media--flush`: remove the space between the image- and text-content.
+* `.o-media--[tiny|small|large|huge]`: alter the spacing between the image- and
   text-content.
-* `.media--rev`: reverse the horizontal rendered order of the image- and
+* `o-.media--rev`: reverse the horizontal rendered order of the image- and
   text-content.
-* `.media--responsive`: a very basic responsive implementation of the media
+* `.o-media--responsive`: a very basic responsive implementation of the media
   object. Pragmatic; far from perfect.
 
 For example:
 
 ```html
-<div class="media  media--flush  media--rev">
-    <img class="media__img" src="/path/to/image.png" alt="" />
-    <div class="media__body">
+<div class="o-media  o-media--flush  o-media--rev">
+    <img class="o-media__img" src="/path/to/image.png" alt="" />
+    <div class="o-media__body">
         <p>Text-like content goes here.</p>
     </div>
 </div>
